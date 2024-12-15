@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Door Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add background image */
+        body {
+            background-image: url('organic-flat-jungle-background_23-2148952811.avif'); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Add custom styles for the doors */
+        .door-container {
+            display: flex; /* Use flexbox for side-by-side display */
+            justify-content: space-around; /* Distribute the doors evenly */
+            margin-top: 30px;
+        }
+
+        .door-container form {
+            margin: 0; /* Remove default form margin */
+        }
+
+        .door {
+            width: 200px; /* Width of each door */
+            height: 300px; /* Height of each door */
+            background-color: #ffeb3b;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .door:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .door img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Magic Door Adventure</h1>
+    <p>Welcome to the Magic Door Adventure! Begin your quest by entering one of the magical doors below.</p>
+    
+    <!-- Doors container for side-by-side display -->
+    <div class="door-container">
+        <form method="post" action="door1.php">
+            <button class="door" name="choice" value="1">
+                <img src="door-opening-fantasy-world.jpg" alt="Door 1">
+                <div>Enter Door 1</div>
+            </button>
+        </form>
+        <form method="post" action="door2.php">
+            <button class="door" name="choice" value="2">
+                <img src="door-stretching-into-fantasy-world (1).jpg" alt="Door 2">
+                <div>Enter Door 2</div>
+            </button>
+        </form>
+        <form method="post" action="door3.php">
+            <button class="door" name="choice" value="3">
+                <img src="door-stretching-into-fantasy-world.jpg" alt="Door 3">
+                <div>Enter Door 3</div>
+            </button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

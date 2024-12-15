@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('organic-flat-jungle-background_23-2148952811.avif'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff; /* White text for better readability on dark backgrounds */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+h1 {
+    color: #ffeb3b;
+    text-shadow: 0 0 20px #ffeb3b, 2px 2px 10px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffeb3b, 2px 2px 15px rgba(0, 0, 0, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 30px #ffeb3b, 5px 5px 20px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.door {
+    display: inline-block;
+    margin: 30px;
+    cursor: pointer;
+    width: 250px;
+    height: 400px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.door:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+}
+
+.door img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.door:hover img {
+    transform: scale(1.05);
+}
+
+.door div {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Courier New', monospace;
+}
+
+.story {
+    margin: 20px auto;
+    font-size: 1.5em;
+    max-width: 800px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.restart {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff9800, #ff5722); /* Gradient for a vibrant look */
+    color: white;
+    text-decoration: none;
+    border-radius: 12px; /* Rounded edges for a softer appearance */
+    font-size: 1.4em; /* Slightly larger text for emphasis */
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: 1px; /* Improved readability */
+}
+
+.restart:hover {
+    background: linear-gradient(45deg, #e65100, #ff5722); /* Darker gradient on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.restart:active {
+    transform: scale(0.95); /* Slight compression for click feedback */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Subtle shadow on click */
+}
+
